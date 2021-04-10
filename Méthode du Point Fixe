@@ -1,0 +1,311 @@
+import math as m
+
+### 1 ###
+
+def g1plus(x):
+    return m.sqrt(m.sqrt(9 - 3*x))
+
+def PointFixe(g, xo, epsilon, Nitermax ):
+    xold = xo
+    n = 1
+    xnew = g(xold)
+    diff = xnew - xold
+    xold = xnew
+    
+    while abs(diff) > epsilon and n < Nitermax:
+        xnew = g(xold)
+        diff = xnew - xold
+        xold = xnew
+        n += 1
+    return xnew, n
+
+print("1+:",PointFixe(g1plus, 3/2, 10**(-10), 100000))
+
+
+def g1moins(x):
+    return -m.sqrt(m.sqrt(9 - 3*x))
+
+def PointFixe(g, xo, epsilon, Nitermax ):
+    xold = xo
+    n = 1
+    xnew = g(xold)
+    diff = xnew - xold
+    xold = xnew
+    
+    while abs(diff) > epsilon and n < Nitermax:
+        xnew = g(xold)
+        diff = xnew - xold
+        xold = xnew
+        n += 1
+    return xnew, n
+
+print("1-:",PointFixe(g1moins, -3/2, 10**(-10), 100000))
+
+
+### 2 ###
+
+
+def g2plus(x):
+    return m.acos((x+2)/3)
+
+def PointFixe(g, xo, epsilon, Nitermax ):
+    xold = xo
+    n = 1
+    xnew = g(xold)
+    diff = xnew - xold
+    xold = xnew
+    
+    while abs(diff) > epsilon and n < Nitermax:
+        xnew = g(xold)
+        diff = xnew - xold
+        xold = xnew
+        n += 1
+    return xnew , n
+
+print("2+:",PointFixe(g2plus, 0.5, 10**(-10), 100000))
+
+def g2moins(x):
+    return -m.acos((x+2)/3)
+
+def PointFixe(g, xo, epsilon, Nitermax ):
+    xold = xo
+    n = 1
+    xnew = g(xold)
+    diff = xnew - xold
+    xold = xnew
+    
+    while abs(diff) > epsilon and n < Nitermax:
+        xnew = g(xold)
+        diff = xnew - xold
+        xold = xnew
+        n += 1
+    return xnew , n
+
+print("2-:",PointFixe(g2moins, -0.5, 10**(-10), 100000))
+
+
+
+### 3 ###
+
+
+def g3(x):
+    return m.log(7/x, m.e)
+
+def PointFixe(g, xo, epsilon, Nitermax ):
+    xold = xo
+    n = 1
+    xnew = g(xold)
+    diff = xnew - xold
+    xold = xnew
+
+    while abs(diff) > epsilon and n < Nitermax:
+        xnew = g(xold)
+        diff = xnew - xold
+        xold = xnew
+        n += 1
+    return xnew, n
+
+print("3:",PointFixe(g3, 1.5, 10**(-10), 100000))
+
+
+
+### 4 ###
+
+def g4plus(x):
+    return m.log(10 + x)
+
+def PointFixe(g, xo, epsilon, Nitermax ):
+    xold = xo
+    n = 1
+    xnew = g(xold)
+    diff = xnew - xold
+    xold = xnew
+    
+    while abs(diff) > epsilon and n < Nitermax:
+        xnew = g(xold)
+        diff = xnew - xold
+        xold = xnew
+        n += 1
+    return xnew, n
+
+print("4+:",PointFixe(g4plus, 3, 10**(-10), 100000))
+
+
+def g4moins(x):
+    return -10+(m.exp(x))
+
+def PointFixe(g, xo, epsilon, Nitermax ):
+    xold = xo
+    n = 1
+    xnew = g(xold)
+    diff = xnew - xold
+    xold = xnew
+    
+    while abs(diff) > epsilon and n < Nitermax:
+        xnew = g(xold)
+        diff = xnew - xold
+        xold = xnew
+        n += 1
+    return xnew, n
+
+print("4-:",PointFixe(g4moins, -10, 10**(-10), 100000))
+
+
+### 5 ###
+
+def g5(x):
+    return m.atan((x + 5)/2)
+
+def PointFixe(g, xo, epsilon, Nitermax ):
+    xold = xo
+    n = 1
+    xnew = g(xold)
+    diff = xnew - xold
+    xold = xnew
+    
+    while abs(diff) > epsilon and n < Nitermax:
+        xnew = g(xold)
+        diff = xnew - xold
+        xold = xnew
+        n += 1
+    return xnew, n
+
+print("5:",PointFixe(g5, 2.1, 10**(-10), 100000))
+
+
+### 6 ###
+
+
+def g6(x):
+    return m.log(x**2 + 3)
+
+def PointFixe(g, xo, epsilon, Nitermax ):
+    xold = xo
+    n = 1
+    xnew = g(xold)
+    diff = xnew - xold
+    xold = xnew
+    
+    while abs(diff) > epsilon and n < Nitermax:
+        xnew = g(xold)
+        diff = xnew - xold
+        xold = xnew
+        n += 1
+    return xnew, n
+
+print("6:",PointFixe(g6, 1.9, 10**(-10), 100000))
+
+### 7 ###
+
+
+def g7(x):
+    return (7 - 4*m.log(x))/3
+
+def PointFixe(g, xo, epsilon, Nitermax ):
+    xold = xo
+    n = 1
+    xnew = g(xold)
+    diff = xnew - xold
+    xold = xnew
+    
+    while abs(diff) > epsilon and n < Nitermax:
+        xnew = g(xold)
+        diff = xnew - xold
+        xold = xnew
+        n += 1
+    return xnew, n
+
+print("7:",PointFixe(g7, 1.9, 10**(-10), 100000))
+
+
+### 8 ###
+
+def g8plus(x):
+    return m.sqrt(m.sqrt(17 + 2*x**2 - 4*x))
+
+
+def PointFixe(g, xo, epsilon, Nitermax ):
+    xold = xo
+    n = 1
+    xnew = g(xold)
+    diff = xnew - xold
+    xold = xnew
+    
+    while abs(diff) > epsilon and n < Nitermax:
+        xnew = g(xold)
+        diff = xnew - xold
+        xold = xnew
+        n += 1
+    return xnew, n
+
+print("8+:",PointFixe(g8plus, 2.5, 10**(-10), 100000))
+
+def g8moins(x):
+    return -m.sqrt(m.sqrt(17 + 2*x**2 - 4*x))
+
+
+def PointFixe(g, xo, epsilon, Nitermax ):
+    xold = xo
+    n = 1
+    xnew = g(xold)
+    diff = xnew - xold
+    xold = xnew
+    
+    while abs(diff) > epsilon and n < Nitermax:
+        xnew = g(xold)
+        diff = xnew - xold
+        xold = xnew
+        n += 1
+    return xnew, n
+
+print("8-:",PointFixe(g8moins, -2.5, 10**(-10), 100000))
+
+
+
+### 9 ###
+
+
+def g9(x):
+    return m.log(2*m.sin(x) + 7)
+
+
+def PointFixe(g, xo, epsilon, Nitermax ):
+    xold = xo
+    n = 1
+    xnew = g(xold)
+    diff = xnew - xold
+    xold = xnew
+    
+    while abs(diff) > epsilon and n < Nitermax:
+        xnew = g(xold)
+        diff = xnew - xold
+        xold = xnew
+        n += 1
+    return xnew, n
+
+print("9:",PointFixe(g9, 2, 10**(-10), 100000))
+
+
+### 10 ###
+
+
+def g10(x):
+    return m.log(10/(m.log(x**2+4)))
+
+def PointFixe(g, xo, epsilon, Nitermax ):
+    xold = xo
+    n = 1
+    xnew = g(xold)
+    diff = xnew - xold
+    xold = xnew
+    
+    while abs(diff) > epsilon and n < Nitermax:
+        xnew = g(xold)
+        diff = xnew - xold
+        xold = xnew
+        n += 1
+    return xnew, n
+
+print("10:",PointFixe(g10, 1.5, 10**(-10), 100000))
+
+
